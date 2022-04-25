@@ -8,6 +8,9 @@
 html{
     scroll-behavior: smooth;
 }
+::-webkit-scrollbar{
+    width: 0px;
+}
 
 /* Header Section */
 header{
@@ -138,8 +141,12 @@ header .listNav a:hover{
 /* About Section */
 .about{
     width: 100%;
-    height: 100vh;
+    height: 120vh;
     background-color: rgb(0, 0, 0);
+    padding-top: 40px;
+}
+.about h2{
+    color: white;
 }
 .about .imgBox{
     width: 100%;
@@ -176,4 +183,31 @@ header .listNav a:hover{
     padding: 5px;
     padding-left: 10px;
     border-left: 5px solid goldenrod;
+}
+
+/* Testimoni Section */
+.testimoni{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    padding-top: 40px;
+}
+.testimoni .testTittle h2{
+    color: white;
+}
+.testimoni .testBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    padding: 0;
+}
+.testimoni .testBox .imgBox2{
+    width: 100%;
+    height: 50%;
+    background-color: yellow;
+    display: grid;
+    grid-template-columns: repeat(5, 500px);
+    overflow: auto;
 }
