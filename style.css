@@ -1,3 +1,9 @@
+@font-face {
+    font-family: "opera-western";
+    src: url(font/OperaWestern.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
 *{
     box-sizing: border-box;
     margin: 0;
@@ -31,8 +37,8 @@ header .imgBox{
     justify-content: center;
     align-items: center;
 }
-header .imgBox h2{
-    color: white;
+header .imgBox img{
+    height: 45px;
 }
 header .listNav{
     height: 40px;
@@ -48,7 +54,7 @@ header .listNav div{
     align-items: center;
 }
 header .listNav div:hover {
-    border-bottom: 3px solid goldenrod;
+    border-bottom: 3px solid rgb(218, 165, 32);
     color: goldenrod;
 }
 header .listNav a{
@@ -65,19 +71,26 @@ header .listNav a:hover{
     width: 100%;
     height: 100vh;
     background-color: black;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 .banner .banTittle{
     color: white;
-    width: 50%;
-    height: 100%;
     float: left;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-left: 20px;
 }
 .banner .banTittle h1{
+    font-family: "opera-western";
     font-size: 3em;
+    letter-spacing: 4px;
+    text-align: center;
+    margin: 5px;
+}
+.banner .banTittle p{
     text-align: center;
 }
 .banner .banTittle .btn{
@@ -93,6 +106,7 @@ header .listNav a:hover{
     align-items: center;
     border-radius: 5px;
     transition: 0.5s;
+    margin-top: 20px;
 }
 .banner .banTittle .btn:hover{
     background-color: gold;
@@ -103,6 +117,12 @@ header .listNav a:hover{
 .banner .banTittle .btn a{
     text-decoration: none;
     color: white;
+}
+.banner .imgBanner{
+    background-image: url(img/imgbanner.jpg);
+    background-size: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* Service Section */
@@ -133,6 +153,7 @@ header .listNav a:hover{
     color: white;
     cursor: pointer;
     border-bottom: 5px solid white;
+    transition: 0.5s;
 }
 .service .template div:hover{
     background-color: goldenrod;
@@ -210,4 +231,32 @@ header .listNav a:hover{
     display: grid;
     grid-template-columns: repeat(5, 500px);
     overflow: auto;
+}
+
+/* Contact Section */
+.contact{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    padding-top: 40px;
+}
+.contact .contactBox{
+    width: 100%;
+    height: calc(100vh - 20%);
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+}
+.contact .medsos{
+    grid-area: 3;
+    margin: auto;
+}
+.contact .medsos a{
+    margin: 20px;
+}
+.contact .medsos a img{
+    height: 60px;
+    transition: 0.5s;
+}
+.contact .medsos a img:hover{
+    height: 80px;
 }
